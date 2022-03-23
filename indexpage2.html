@@ -49,7 +49,7 @@
                     </p>
                     <div class="selectors">
                       <div class="boxes">
-                        <div class="box current-provider">
+                        <div class="box current-provider notneed">
                           <span>Select Current Provider </span>
                           <img class="drop drop1" src="./img/drop.png" alt="" />
                           <div class="dropdown1 d-none">
@@ -58,7 +58,18 @@
                             <a href="">Option3</a>
                           </div>
                         </div>
-                        <div class="box requested-date">
+                        <!-- --------------------------------------- -->
+                        <div class="custom-select box current-provider" style="width:290px;">
+                            <select>
+                              <option value="0">Select Current Provider</option>
+                              <option value="1">Option1</option>
+                              <option value="2">Option2</option>
+                              <option value="3">Option3</option>
+                            </select>
+                          </div>
+                          <!-- --------------------------------------- -->
+                          <input type="text" name="Option" id="selectit">
+                          <div class="box requested-date">
                           <span>Requested Connection Date</span>
                           <img class="drop drop2" src="./img/drop.png" alt="" />
                           <div class="dropdown2 d-none">
@@ -326,14 +337,15 @@ const scriptURL =
 // Getting the form tag
 const form = document.forms["google-sheet"];
 // 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async(e) => {
 e.preventDefault();
-fetch(scriptURL, { method: "POST", body: new FormData(form) })
+alert('Your request is in process! Please wait for a while');
+await fetch(scriptURL, { method: "POST", body: new FormData(form) })
   .then((response) =>{
-    console.log("Submit Successfully");
+    alert("Submit Successfully");
 })
   .catch((error) =>
-    {console.log("Submit Fail")}
+    {alert("Submit Fail")}
   );
 });
  </script>
