@@ -33,7 +33,7 @@ body {
   margin: auto;
 }
 
-.main-container {
+.main-container2 {
   max-width: 65%;
   margin: auto;
   margin-top: 50px;
@@ -639,7 +639,7 @@ body {
     grid-template-columns: 1fr 2fr;
     grid-gap: 10px;
   }
-  .main-container {
+  .main-container2 {
     max-width: 75%;
     margin-top: 30px;
   }
@@ -666,7 +666,7 @@ body {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
-  .main-container {
+  .main-container2 {
     max-width: 85%;
     margin-top: 20px;
   }
@@ -706,7 +706,7 @@ body {
 }
 
 @media screen and (max-width: 500px) {
-  .main-container {
+  .main-container2 {
     max-width: 100%;
     margin-top: 10px;
     padding: 20px;
@@ -833,4 +833,30 @@ body {
   padding-bottom: 3px;
   font-size: 18px;
   height: 52px;
+}
+
+.page1 {
+  display: block;
+  transition: 0.25s ease-in-out;
+}
+
+.page2 {
+  display: none;
+  transition: 0.25s ease-in-out;
+}
+
+.hide-page {
+  display: none;
+  transform: scale(0);
+}
+
+.show-page {
+  display: block;
+  transform: scale(1);
+}
+
+#content-three {
+  position: absolute;
+  left: -20000px;
+  pointer-events: none;
 }

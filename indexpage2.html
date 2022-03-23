@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f09467ed03.js" crossorigin="anonymous"></script>
+    <!--  -->
+    <link rel="stylesheet" href="./indexpage1.css" />
     <link rel="stylesheet" href="./indexpage2.css">
     <title>Document</title>
     
@@ -18,154 +20,303 @@
             <img class="logo-image" src="./img/logo.png" alt="">
         </div>
     </nav>
-    <div class="main-container">
-        <h2>Lets get some details</h2>
-        <p>We will use these details to you sign up to get Mythical Fibre</p>
-        <p>For more information on how we protect your information in line with the privacy Act 2020, <a
-                class="click-here" href="">Click
-                here</a></p>
-    <form name="google-sheet">
-        <div class="grid1">
-            <div class="label">
-                YOUR NAME
+    <!-- ----- Page One ----- -->
+    <div class="page1">
+        <div class="main-container">
+            <div class="heading">
+              <h2>Looks like Fibre is already installed at your place!</h2>
+              <p>
+                We just need some details about your property before continuing. This
+                helps us get things connected right first time and on time
+              </p>
             </div>
-            <div class="inputs-name">
-                <span class="form-label">
-                    <input id="username" type="text" name="First Name" required/>
-                    <label for="username">First Name</label>
-                </span>
-
-                <span class="form-label">
-                    <input type="text" id="password" name="Last Name" required/>
-                    <label for="password">Last Name</label>
-                </span>
-
-                <span class="form-label">
-                    <input type="text" name="Nick Name" id="name" required/>
-                    <label for="password">Preferred(We will use this name when we contact you)</label>
-                </span>
-            </div>
-        </div>
-        <div class="grid1">
-            <div class="label">
-                DATE OF BIRTH
-            </div>
-            <div class="date-inputs">
-                <input type="text" name="Date" id="date" placeholder="DD" required>
-                <input type="text" name="Month" id="date1" placeholder="MM" required>
-                <input type="text" name="Year" id="date-1" placeholder="YYYY" required>
-            </div>
-        </div>
-        <div class="grid1">
-            <div class="label special-label">
-                PRONOUNS
-            </div>
-            <div class="date-inputs set-in-safari">
-                <div class="box-out">
-                    <!-- <div class="box current-provider">
-                        <span>What are your Pronouns? <br>
-                            (Optional)</span>
-                        <img class="drop" src="./img/drop.png" alt="">
-
+      <form name="google-sheet" id="SignupForm">
+            <div class="grid1 top">
+              <div class="label">PROPERTY DETAILS</div>
+              <div class="inputs">
+                <div class="inner-grid1">
+                  <div class="dot-out">
+                    <div class="dot1">
+                      <div class="inner-dot1 d-none">
+                        <img class="inner-dot-img" src="./img/dot.png" alt="" />
+                      </div>
                     </div>
-                    <div class="dropdown1 d-none">
-                        <a >She/Her</a>
-                        <a >He/Him</a>
-                        <a >They/Them</a>
-                        <a >IA</a>
-                        <a >None, just use my name</a>
-
-                    </div> -->
-                    <!-- Custom Select Box -->
-                    <div class="select-box">
-                        <div class="options-container">
-                          <div class="option">
-                            <input
-                              type="radio"
-                              class="radio"
-                              id="automobiles"
-                              name="category"
-                            />
-                            <label for="automobiles">She/Her</label>
-                          </div>
-                
-                          <div class="option">
-                            <input type="radio" class="radio" id="film" name="category" />
-                            <label for="film">He/Him</label>
-                          </div>
-                
-                          <div class="option">
-                            <input type="radio" class="radio" id="science" name="category" />
-                            <label for="science">They/Them</label>
-                          </div>
-                
-                          <div class="option">
-                            <input type="radio" class="radio" id="art" name="category" />
-                            <label for="art">IA</label>
-                          </div>
-                          <div class="option">
-                            <input type="radio" class="radio" id="myname" name="category" />
-                            <label for="myname">None, just use my name</label>
+                  </div>
+      
+                  <div class="content1">
+                    <p>
+                      I’m currently with another broadband provider for this property.
+                    </p>
+                    <div class="selectors">
+                      <div class="boxes">
+                        <div class="box current-provider">
+                          <span>Select Current Provider </span>
+                          <img class="drop drop1" src="./img/drop.png" alt="" />
+                          <div class="dropdown1 d-none">
+                            <a href="">Option1</a>
+                            <a href="">Option2</a>
+                            <a href="">Option3</a>
                           </div>
                         </div>
-                
-                        <div class="selected">What are your Pronouns? <br>
-                            (Optional)</div>
+                        <div class="box requested-date">
+                          <span>Requested Connection Date</span>
+                          <img class="drop drop2" src="./img/drop.png" alt="" />
+                          <div class="dropdown2 d-none">
+                            <input
+                              id="day-picker-input"
+                              type="number"
+                              placeholder="DD"
+                              max="31"
+                              name="Connection Day"
+                            />
+                            <input
+                              id="month-picker-input"
+                              type="number"
+                              placeholder="MM"
+                              max="12"
+                              name="Connection Month"
+                            />
+                            <input
+                              id="year-picker-input"
+                              type="number"
+                              placeholder="YYYY"
+                              name="Connection Year"
+                            />
+                            <div class="validationMessage"></div>
+                          </div>
+                        </div>
                       </div>
-                      <input type="text" name="Gender" id="Gender">
+      
+                      <p>
+                        You should inform your current provider that you are changing
+                        providers and select a day 30 days from today. We are not
+                        responsible for any charges you incurr with your current
+                        provider.
+                      </p>
                     </div>
-                    <!--  -->
+                  </div>
                 </div>
-
-
+                <div class="inner-grid1">
+                  <div class="dot-out">
+                    <div class="dot2">
+                      <div class="inner-dot2 d-none">
+                        <img class="inner-dot-img" src="./img/dot.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="content2">
+                    <p>I’m moving or have recently moved into this property.</p>
+                    <div class="selectors">
+                      <div class="box1 connection-date">
+                        <span>Select Connection Date</span>
+                        <img class="drop drop3" src="./img/drop.png" alt="" />
+                        <div class="dropdown3 d-none">
+                          <input
+                            id="day-picker-input1"
+                            type="text"
+                            placeholder="DD"
+                            name="Moving Day"
+                          />
+                          <input
+                            id="month-picker-input1"
+                            type="text"
+                            placeholder="MM"
+                            name="Moving Month"
+                          />
+                          <input
+                            id="year-picker-input1"
+                            type="text"
+                            placeholder="YYYY"
+                            name="Moving Year"
+                          />
+                          <div class="validationMessage1"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="inner-grid1">
+                  <div class="dot-out">
+                    <div class="dot3">
+                      <div class="inner-dot3 d-none">
+                        <img class="inner-dot-img" src="./img/dot.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div class="content3">
+                    <p>There are no broadband services at this address.</p>
+                    <input type="text" name="No Service" id="content-three" >
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-        <div class="grid1">
-            <div class="label">
-                CONTACT DETAILS
-            </div>
-            <div class="inputs-name">
-
-                <span class="form-label">
-                    <input type="text" id="password1" name="Phone Number" required/>
-                    <label for="phoneNumber">Phone Number(Mobile Preferred)</label>
-                </span>
-                <span class="form-label">
-                    <input type="email" id="email" name="Email" required/>
-                    <label for="Email">Email Address</label>
-                </span>
-
-            </div>
-
-            <!-- <div class="label">
-                EMAIL ADDRESS
-            </div>
-            <div class="inputs">
-                <input type="email" placeholder="name@xtra.co.nz">
-
-            </div> -->
-        </div>
-        <!-- <div class="grid1">
-            <div class="label">
-                MOBILE NUMBER
-            </div>
-            <div class="num-inputs">
-                <input type="text" placeholder="027 045 5522">
-
-            </div>
-        </div> -->
-        <div class="grid2">
-            <div class="button">
-                <a > <input type="submit" name="submit" class="next-button"/>
+      
+            <div class="grid2">
+              <div class="button">
+                <a href="#">
+                  <!-- <button class="next-button">NEXT</button> -->
+                  <input class="next-button" type="submit" value="Next">
                 </a>
-            </div>
-            <div class="rings">
+              </div>
+              <div class="rings">
+                <div class="ring2"></div>
                 <div class="ring1"></div>
-                <div class="ring1"></div>
+              </div>
             </div>
-        </div>
+          </div>
     </div>
-</form>
+    <!-- ----- Page Two ----- -->
+    <div class="page2">
+        <div class="main-container2">
+            <h2>Lets get some details</h2>
+            <p>We will use these details to you sign up to get Mythical Fibre</p>
+            <p>For more information on how we protect your information in line with the privacy Act 2020, <a
+                    class="click-here" href="">Click
+                    here</a></p>
+            <div class="grid1">
+                <div class="label">
+                    YOUR NAME
+                </div>
+                <div class="inputs-name">
+                    <span class="form-label">
+                        <input id="username" type="text" name="First Name" required/>
+                        <label for="username">First Name</label>
+                    </span>
+    
+                    <span class="form-label">
+                        <input type="text" id="password" name="Last Name" required/>
+                        <label for="password">Last Name</label>
+                    </span>
+    
+                    <span class="form-label">
+                        <input type="text" name="Password" id="name" required/>
+                        <label for="password">Preferred(We will use this name when we contact you)</label>
+                    </span>
+                </div>
+            </div>
+            <div class="grid1">
+                <div class="label">
+                    DATE OF BIRTH
+                </div>
+                <div class="date-inputs">
+                    <input type="text" name="Date" id="date" placeholder="DD" required>
+                    <input type="text" name="Month" id="date1" placeholder="MM" required>
+                    <input type="text" name="Year" id="date-1" placeholder="YYYY" required>
+                </div>
+            </div>
+            <div class="grid1">
+                <div class="label special-label">
+                    PRONOUNS
+                </div>
+                <div class="date-inputs set-in-safari">
+                    <div class="box-out">
+                        <!-- <div class="box current-provider">
+                            <span>What are your Pronouns? <br>
+                                (Optional)</span>
+                            <img class="drop" src="./img/drop.png" alt="">
+    
+                        </div>
+                        <div class="dropdown1 d-none">
+                            <a >She/Her</a>
+                            <a >He/Him</a>
+                            <a >They/Them</a>
+                            <a >IA</a>
+                            <a >None, just use my name</a>
+    
+                        </div> -->
+                        <!-- Custom Select Box -->
+                        <div class="select-box">
+                            <div class="options-container">
+                              <div class="option">
+                                <input
+                                  type="radio"
+                                  class="radio"
+                                  id="automobiles"
+                                  name="category"
+                                />
+                                <label for="automobiles">She/Her</label>
+                              </div>
+                    
+                              <div class="option">
+                                <input type="radio" class="radio" id="film" name="category" />
+                                <label for="film">He/Him</label>
+                              </div>
+                    
+                              <div class="option">
+                                <input type="radio" class="radio" id="science" name="category" />
+                                <label for="science">They/Them</label>
+                              </div>
+                    
+                              <div class="option">
+                                <input type="radio" class="radio" id="art" name="category" />
+                                <label for="art">IA</label>
+                              </div>
+                              <div class="option">
+                                <input type="radio" class="radio" id="myname" name="category" />
+                                <label for="myname">None, just use my name</label>
+                              </div>
+                            </div>
+                    
+                            <div class="selected">What are your Pronouns? <br>
+                                (Optional)</div>
+                          </div>
+                          <input type="text" name="Gender" id="Gender">
+                        </div>
+                        <!--  -->
+                    </div>
+    
+    
+                </div>
+            </div>
+            <div class="grid1">
+                <div class="label">
+                    CONTACT DETAILS
+                </div>
+                <div class="inputs-name">
+    
+                    <span class="form-label">
+                        <input type="text" id="password1" name="Phone Number" required/>
+                        <label for="phoneNumber">Phone Number(Mobile Preferred)</label>
+                    </span>
+                    <span class="form-label">
+                        <input type="email" id="email" name="Email" required/>
+                        <label for="Email">Email Address</label>
+                    </span>
+    
+                </div>
+    
+                <!-- <div class="label">
+                    EMAIL ADDRESS
+                </div>
+                <div class="inputs">
+                    <input type="email" placeholder="name@xtra.co.nz">
+    
+                </div> -->
+            </div>
+            <!-- <div class="grid1">
+                <div class="label">
+                    MOBILE NUMBER
+                </div>
+                <div class="num-inputs">
+                    <input type="text" placeholder="027 045 5522">
+    
+                </div>
+            </div> -->
+            <div class="grid2">
+                <div class="button">
+                  <input id="SaveAccount" type="submit" name="submit" class="next-button"/>
+                </div>
+                <div class="rings">
+                    <div class="ring1"></div>
+                    <div class="ring1"></div>
+                </div>
+            </div>
+        
+    </form>
+    </div>
+ <!--  -->
     <script>
         
 /* Getting Your User Detail and send into google sheet */
@@ -179,16 +330,20 @@ form.addEventListener("submit", (e) => {
 e.preventDefault();
 fetch(scriptURL, { method: "POST", body: new FormData(form) })
   .then((response) =>{
-      alert("Submit Successfully");
+    console.log("Submit Successfully");
 })
   .catch((error) =>
-    {alert("Submit Fail")}
+    {console.log("Submit Fail")}
   );
 });
-
-
-    </script>
+ </script>
+ <!--  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- page one script  -->    
+    <script src="index.js"></script>
+
+    <!-- page two script -->
     <script src="index1.js"></script>   
 </body>
 

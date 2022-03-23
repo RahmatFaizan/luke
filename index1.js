@@ -68,3 +68,24 @@ jQuery(document).ready(function () {
     else $(this).addClass("hascontent");
   });
 });
+
+/* Exchange one page to another page */
+
+const nextBtn = document.querySelector(".next-button");
+const hideThisPage = document.querySelector(".page1");
+const hiddenPage = document.querySelector(".page2");
+
+nextBtn.addEventListener("click", () => {
+  hiddenPage.classList.add("show-page");
+  hideThisPage.classList.add("hide-page");
+});
+
+/* Getting the value of third option in page 1 to send in database */
+
+const thirdoption = document.querySelector(".dot3");
+const thirdoptionValue = document.querySelector(".content3 p");
+const contentThree = document.querySelector("#content-three");
+thirdoption.addEventListener("click", () => {
+  var Value = thirdoptionValue.textContent;
+  contentThree.value = Value;
+});
