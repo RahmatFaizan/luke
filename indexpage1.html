@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/f09467ed03.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./indexpage1.css" />
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <nav class="nav">
+      <div class="logo-div">
+        <img class="logo-image" src="./img/logo.png" alt="" />
+      </div>
+    </nav>
+    <div class="main-container">
+      <div class="heading">
+        <h2>Looks like Fibre is already installed at your place!</h2>
+        <p>
+          We just need some details about your property before continuing. This
+          helps us get things connected right first time and on time
+        </p>
+      </div>
+
+      <div class="grid1 top">
+        <div class="label">PROPERTY DETAILS</div>
+        <div class="inputs">
+          <div class="inner-grid1">
+            <div class="dot-out">
+              <div class="dot1">
+                <div class="inner-dot1 d-none">
+                  <img class="inner-dot-img" src="./img/dot.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div class="content1">
+              <p>
+                I’m currently with another broadband provider for this property.
+              </p>
+              <div class="selectors">
+                <div class="boxes">
+                  <div class="box current-provider">
+                    <span>Select Current Provider </span>
+                    <img class="drop drop1" src="./img/drop.png" alt="" />
+                    <div class="dropdown1 d-none">
+                      <a href="">Option1</a>
+                      <a href="">Option2</a>
+                      <a href="">Option3</a>
+                    </div>
+                  </div>
+                  <div class="box requested-date">
+                    <span>Requested Connection Date</span>
+                    <img class="drop drop2" src="./img/drop.png" alt="" />
+                    <div class="dropdown2 d-none">
+                      <input
+                        id="day-picker-input"
+                        type="number"
+                        placeholder="DD"
+                        max="31"
+                      />
+                      <input
+                        id="month-picker-input"
+                        type="number"
+                        placeholder="MM"
+                        max="12"
+                      />
+                      <input
+                        id="year-picker-input"
+                        type="number"
+                        placeholder="YYYY"
+                      />
+                      <div class="validationMessage"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <p>
+                  You should inform your current provider that you are changing
+                  providers and select a day 30 days from today. We are not
+                  responsible for any charges you incurr with your current
+                  provider.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="inner-grid1">
+            <div class="dot-out">
+              <div class="dot2">
+                <div class="inner-dot2 d-none">
+                  <img class="inner-dot-img" src="./img/dot.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div class="content2">
+              <p>I’m moving or have recently moved into this property.</p>
+              <div class="selectors">
+                <div class="box1 connection-date">
+                  <span>Select Connection Date</span>
+                  <img class="drop drop3" src="./img/drop.png" alt="" />
+                  <div class="dropdown3 d-none">
+                    <input
+                      id="day-picker-input1"
+                      type="text"
+                      placeholder="DD"
+                    />
+                    <input
+                      id="month-picker-input1"
+                      type="text"
+                      placeholder="MM"
+                    />
+                    <input
+                      id="year-picker-input1"
+                      type="text"
+                      placeholder="YYYY"
+                    />
+                    <div class="validationMessage1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="inner-grid1">
+            <div class="dot-out">
+              <div class="dot3">
+                <div class="inner-dot3 d-none">
+                  <img class="inner-dot-img" src="./img/dot.png" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div class="content3">
+              <p>There are no broadband services at this address.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="button">
+          <a href="indexpage2.html">
+            <button class="next-button">NEXT</button>
+          </a>
+        </div>
+        <div class="rings">
+          <div class="ring2"></div>
+          <div class="ring1"></div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+.Chch_Icon_copy {
+  background-image: url("images/Chch Icon copy.png");
+  position: absolute;
+  left: 17.806in;
+  top: 4in;
+  width: 3.986in;
+  height: 4.257in;
+  z-index: 35;
+}
